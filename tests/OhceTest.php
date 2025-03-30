@@ -59,5 +59,14 @@ class OhceTest extends TestCase
         $this->assertEquals("oto\n¡Bonita palabra!", $response);
     }
 
+    /**
+     * @test
+     */
+    public function givenStopReturnsAdiosNombre(): void
+    {
+        $response = $this->ohce->response("Stop!");
+        $this->assertEquals("Adios Alex", $response);
+    }
+
 
 }
