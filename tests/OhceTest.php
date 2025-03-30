@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 class OhceTest extends TestCase
 {
     private Ohce $ohce;
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
         $this->ohce = new Ohce();
@@ -40,5 +40,17 @@ class OhceTest extends TestCase
         $response = $this->ohce->saludo("Alex", 16);
         $this->assertEquals("¡Buenas tardes Alex!", $response);
     }
+
+    /**
+     * @test
+     */
+    public function givenWordReturnsReversedWord(): void
+    {
+        $response = $this->ohce->response("hola");
+        $this->assertEquals("aloh", $response);
+    }
+
+
+
 
 }

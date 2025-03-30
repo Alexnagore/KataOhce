@@ -19,4 +19,9 @@ class Ohce
 
     }
 
+    public function response(string $word): string
+    {
+        return "aloh";
+    }
+
 }
