@@ -21,7 +21,12 @@ class Ohce
 
     public function response(string $word): string
     {
-        return "aloh";
+        $reversed = strrev($word);
+
+        if ($word === $reversed){
+            return $reversed . "\n¡Bonita palabra!";
+        }
+        return $reversed;
     }
 
 }

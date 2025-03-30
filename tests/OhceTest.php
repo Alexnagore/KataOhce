@@ -50,7 +50,14 @@ class OhceTest extends TestCase
         $this->assertEquals("aloh", $response);
     }
 
-
+    /**
+     * @test
+     */
+    public function givenPalindromeReturnsReversedWordAndBonitaPalabra(): void
+    {
+        $response = $this->ohce->response("oto");
+        $this->assertEquals("oto\n¡Bonita palabra!", $response);
+    }
 
 
 }
